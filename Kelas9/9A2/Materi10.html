@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 10</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu membongkar sebuah kemasan lalu membentangkannya hingga menjadi bentuk datar?</li>
+<li>Mengapa menurutmu suatu bangun ruang dapat dibentuk kembali dari potongan-potongan bidang datar tertentu?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Mengamati kaleng minuman yang dibuka dan diratakan untuk melihat bagian-bagiannya.</li>
+<li>Membentangkan kertas pembungkus cone es krim untuk mengetahui bentuk selimutnya.</li>
+<li>Mengamati kemasan tabung atau kerucut dalam kehidupan sehari-hari.</li>
+<li>Menggunakan jaring-jaring untuk memperkirakan luas permukaan benda sebelum dirangkai.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu menggambarkan dan menjelaskan jaring-jaring dari bangun ruang sisi lengkung (tabung, kerucut, dan bola) serta menghubungkannya dengan bentuk 3D-nya.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Mengamati contoh jaring-jaring tabung, kerucut, dan ilustrasi permukaan bola.</li>
+<li>Berdiskusi dalam kelompok untuk mencocokkan jaring-jaring dengan bangun ruang asalnya.</li>
+<li>Mengerjakan latihan menggambar atau mengidentifikasi jaring-jaring bangun sisi lengkung.</li>
+<li>Menyampaikan hasil diskusi dan menjelaskan hubungan antara jaring-jaring dan bangunnya.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+Jaring-jaring adalah bentuk dua dimensi dari suatu bangun ruang yang jika dilipat akan membentuk bangun tiga dimensi.<br><br>
+<strong>Tabung</strong><br>
+2 lingkaran (alas dan tutup)<br>
+1 persegi panjang (selimut tabung)<br><br>
+<strong>Kerucut</strong><br>
+1 lingkaran (alas)<br>
+1 sektor lingkaran (selimut kerucut)<br><br>
+<strong>Bola</strong><br>
+Bola tidak memiliki jaring-jaring datar yang sempurna karena seluruh permukaannya melengkung. Namun, dalam konteks pembelajaran, bisa digunakan pendekatan visual seperti potongan kulit jeruk atau globe yang dibuka.
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1 (Tabung)</strong><br>
+Gambarlah jaring-jaring tabung dengan jari-jari 4 cm dan tinggi 10 cm.<br>
+Jawaban:<br>
+2 lingkaran dengan radius 4 cm<br>
+1 persegi panjang dengan panjang = keliling lingkaran = 2πr = 25,12 cm dan tinggi 10 cm<br><br>
+<strong>Contoh Soal 2 (Kerucut)</strong><br>
+Gambarlah jaring-jaring kerucut dengan jari-jari alas 3 cm dan panjang garis pelukis 6 cm.<br>
+Jawaban:<br>
+1 lingkaran dengan radius 3 cm<br>
+1 sektor lingkaran dengan radius 6 cm dan panjang busur = keliling alas = 2π × 3 = 18,84 cm
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Buatlah jaring-jaring tabung dengan jari-jari 5 cm dan tinggi 8 cm.</li>
+<li>Buatlah jaring-jaring kerucut dengan jari-jari 4 cm dan garis pelukis 9 cm.</li>
+<li>Jelaskan mengapa bola tidak memiliki jaring-jaring datar seperti tabung dan kerucut. Buatlah pendekatan visual untuk menjelaskan bentuk bola.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Bagaimana jaring-jaring membantu kita memahami bentuk bangun ruang?</li>
+<li>Apa tantangan yang kamu hadapi saat menggambar jaring-jaring bangun sisi lengkung?</li>
+<li>Bagaimana kamu bisa menggunakan jaring-jaring untuk menghitung luas permukaan bangun?</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

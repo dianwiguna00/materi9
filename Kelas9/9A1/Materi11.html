@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 11</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu bercermin dan melihat bayangan tubuhmu tampak sama tetapi posisinya terbalik?</li>
+<li>Mengapa menurutmu suatu bentuk bisa dipindahkan, diputar, atau diperbesar tanpa mengubah bentuk aslinya?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Mengamati bayangan pada cermin, genangan air, atau permukaan kaca sebagai contoh pencerminan.</li>
+<li>Melihat pergeseran gambar atau ikon pada layar ponsel dan komputer.</li>
+<li>Memahami perputaran benda seperti jarum jam, roda, atau kipas angin.</li>
+<li>Mengamati perubahan ukuran gambar saat diperbesar atau diperkecil pada aplikasi.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa dapat menjelaskan konsep dasar transformasi geometri (refleksi, translasi, rotasi, dan dilatasi) serta mengenali karakteristik masing-masing jenis transformasi.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Mengamati gambar atau benda yang mengalami pencerminan, pergeseran, perputaran, dan perubahan ukuran.</li>
+<li>Berdiskusi dalam kelompok untuk mengidentifikasi jenis transformasi yang terjadi.</li>
+<li>Mengerjakan latihan sederhana mengelompokkan transformasi berdasarkan cirinya.</li>
+<li>Menyampaikan hasil diskusi dan contoh temuan transformasi di sekitar siswa.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+Transformasi geometri adalah perubahan posisi atau ukuran suatu bangun geometri pada bidang datar. Ada empat jenis utama:<br><br>
+<strong>1. Refleksi (Pencerminan)</strong><br>
+Mencerminkan bangun terhadap garis tertentu (sumbu x, sumbu y, atau garis lainnya).<br>
+Hasilnya adalah bayangan simetris.<br><br>
+<strong>2. Translasi (Perpindahan)</strong><br>
+Memindahkan bangun sejauh vektor tertentu tanpa mengubah bentuk atau ukuran.<br><br>
+<strong>3. Rotasi (Perputaran)</strong><br>
+Memutar bangun terhadap titik pusat dengan sudut tertentu (misalnya 90°, 180°).<br><br>
+<strong>4. Dilatasi (Perkalian Skala)</strong><br>
+Mengubah ukuran bangun dengan faktor skala, bisa memperbesar atau memperkecil.
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1: Refleksi</strong><br>
+Titik A(3, 4) direfleksikan terhadap sumbu x. Tentukan koordinat bayangannya.<br>
+Penyelesaian: Refleksi terhadap sumbu x → ubah tanda y: A'(3, -4)<br><br>
+<strong>Contoh Soal 2: Translasi</strong><br>
+Titik B(-2, 5) ditranslasikan oleh vektor (3, -2). Tentukan koordinat hasil translasi.<br>
+Penyelesaian:<br>
+B' = (-2 + 3, 5 - 2) = (1, 3)<br><br>
+<strong>Contoh Soal 3: Rotasi</strong><br>
+Titik C(2, 1) diputar 90° berlawanan arah jarum jam terhadap titik pusat (0, 0). Tentukan koordinat hasil rotasi.<br>
+Penyelesaian: (x, y) → (-y, x) sehingga C' = (-1, 2)<br><br>
+<strong>Contoh Soal 4: Dilatasi</strong><br>
+Titik D(4, -3) didilatasi dengan faktor skala 2 terhadap titik pusat (0, 0). Tentukan koordinat hasil dilatasi.<br>
+Penyelesaian:<br>
+D' = (8, -6)
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Tentukan bayangan titik berikut:<br>
+a. Refleksi titik E(5, -2) terhadap sumbu y<br>
+b. Translasi titik F(0, 0) oleh vektor (-3, 4)<br>
+c. Rotasi titik G(-1, 2) sebesar 180° terhadap titik pusat (0, 0)<br>
+d. Dilatasi titik H(6, -1) dengan faktor skala 0.5</li>
+<li>Jelaskan perbedaan antara translasi dan rotasi dalam hal perubahan posisi dan orientasi bangun.</li>
+<li>Buatlah sketsa sederhana dari hasil refleksi dan rotasi titik A(2, 3) terhadap sumbu x dan rotasi 90°.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Jenis transformasi mana yang menurutmu paling mudah dipahami dan mengapa?</li>
+<li>Bagaimana transformasi geometri digunakan dalam kehidupan nyata, misalnya dalam desain grafis atau arsitektur?</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 9</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu menghadapi soal cerita dan bingung menentukan matematika apa yang bisa digunakan untuk menyelesaikannya?</li>
+<li>Mengapa satu masalah kehidupan nyata bisa diselesaikan dengan bilangan berpangkat atau bentuk akar?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Menghitung jumlah benda yang bertambah secara berlipat dalam waktu tertentu.</li>
+<li>Menentukan panjang sisi atau jarak dari data luas atau posisi tertentu.</li>
+<li>Menyederhanakan penulisan bilangan besar agar mudah dibaca dan dipahami.</li>
+<li>Menafsirkan hasil perhitungan matematika untuk menjawab masalah nyata.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa dapat menerapkan konsep bilangan berpangkat dan bentuk akar untuk menyelesaikan masalah dalam konteks kehidupan nyata secara tepat dan logis.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Mengamati beberapa contoh masalah kontekstual yang disajikan guru.</li>
+<li>Berdiskusi dalam kelompok untuk menentukan informasi penting dan cara penyelesaiannya.</li>
+<li>Mengerjakan latihan masalah kontekstual secara bertahap dan terarah.</li>
+<li>Menyampaikan hasil penyelesaian dan membahas strategi yang digunakan bersama teman.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+Masalah kontekstual adalah soal cerita atau situasi nyata yang melibatkan konsep matematika. Dalam konteks bilangan berpangkat dan bentuk akar, siswa perlu:<br>
+Mengenali bentuk eksponensial atau akar dalam situasi nyata.<br>
+Menggunakan sifat-sifat eksponen dan akar untuk menyelesaikan masalah.<br>
+Menafsirkan hasil dalam konteks soal.
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1: Pertumbuhan Eksponensial</strong><br>
+Sebuah populasi bakteri bertambah dua kali lipat setiap 2 jam. Jika awalnya terdapat 500 bakteri, berapa banyak bakteri setelah 6 jam?<br>
+Penyelesaian:<br>
+Dalam 6 jam, terjadi 3 kali pelipatan (karena setiap 2 jam).<br>
+Maka jumlah bakteri:<br>
+500 × 2³ = 500 × 8 = 4000<br><br>
+<strong>Contoh Soal 2: Pengukuran Jarak</strong><br>
+Sebuah taman berbentuk persegi memiliki luas 225 m². Berapa panjang sisi taman?<br>
+Penyelesaian:<br>
+Sisi taman = √225 = 15 meter<br><br>
+<strong>Contoh Soal 3: Notasi Ilmiah dan Eksponen</strong><br>
+Jarak antara Bumi dan Matahari adalah sekitar 149.600.000 km. Nyatakan dalam notasi ilmiah.<br>
+Penyelesaian:<br>
+149.600.000 = 1.496 × 10⁸ km
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Sebuah virus menyebar dengan pola eksponensial: jumlah kasus bertambah 3 kali lipat setiap hari. Jika hari pertama ada 100 kasus, berapa kasus pada hari ke-4?</li>
+<li>Sebuah layar TV berbentuk persegi memiliki luas 484 cm². Berapa panjang sisi layar?</li>
+<li>Nyatakan bilangan berikut dalam notasi ilmiah:<br>
+a. 0.00056<br>
+b. 7.200.000</li>
+<li>Sebuah drone terbang dari titik A ke titik B yang berjarak 100 meter secara diagonal. Jika posisi A dan B membentuk sudut siku-siku dengan panjang sisi 60 m dan 80 m, hitung jarak diagonal menggunakan bentuk akar.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Bagaimana kamu mengenali bahwa suatu masalah dapat diselesaikan dengan bilangan berpangkat atau bentuk akar?</li>
+<li>Apa manfaat memahami konsep ini dalam kehidupan sehari-hari?</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

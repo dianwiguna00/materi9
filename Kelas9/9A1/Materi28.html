@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 28</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu harus memilih sesuatu ketika hasil akhirnya belum pasti?</li>
+<li>Mengapa menurutmu mengetahui peluang dapat membantu menentukan pilihan yang lebih baik?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Menentukan pilihan mengikuti atau tidak mengikuti suatu kegiatan berdasarkan peluang keberhasilan.</li>
+<li>Mempertimbangkan risiko dan manfaat dalam permainan atau undian sederhana.</li>
+<li>Membandingkan beberapa pilihan dengan peluang hasil yang berbeda.</li>
+<li>Menggunakan informasi peluang untuk membuat keputusan yang lebih rasional.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu menafsirkan nilai peluang dalam berbagai konteks dan menggunakannya sebagai dasar pengambilan keputusan yang logis dan rasional.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Mengamati beberapa contoh situasi pengambilan keputusan yang melibatkan peluang.</li>
+<li>Berdiskusi dalam kelompok untuk menafsirkan nilai peluang pada setiap situasi.</li>
+<li>Mengerjakan latihan menentukan keputusan berdasarkan informasi peluang yang diberikan.</li>
+<li>Menyampaikan hasil diskusi dan alasan pengambilan keputusan secara bergantian.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+Mengapa peluang penting dalam pengambilan keputusan?<br>
+Peluang membantu kita memperkirakan kemungkinan hasil dari suatu tindakan atau pilihan, sehingga kita bisa:<br>
+Menghindari risiko yang terlalu besar.<br>
+Memilih opsi yang paling menguntungkan.<br>
+Membuat keputusan berdasarkan data, bukan tebakan.<br><br>
+<strong>Contoh kehidupan nyata:</strong><br>
+Seorang siswa memilih untuk mengikuti lomba karena peluang menangnya cukup besar.<br>
+Seorang pengusaha mempertimbangkan peluang sukses sebelum membuka cabang baru.
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1</strong><br>
+Seorang siswa memiliki peluang 3/5 untuk lolos seleksi lomba matematika. Ia bisa memilih ikut lomba atau tidak. Bagaimana peluang tersebut dapat membantunya mengambil keputusan?<br>
+Pembahasan:<br>
+- Peluang lolos cukup tinggi (60%).<br>
+- Jika siswa percaya diri dan siap, peluang ini mendukung keputusan untuk ikut lomba.<br><br>
+<strong>Contoh Soal 2</strong><br>
+Dalam sebuah permainan, peluang menang adalah 1/10 dan biaya bermain adalah Rp5.000. Hadiah jika menang adalah Rp30.000. Apakah permainan ini layak diikuti?<br>
+Pembahasan:<br>
+- Peluang menang = 10%<br>
+- Nilai harapan = 1/10 × 30.000 = 3.000<br>
+- Biaya bermain = Rp5.000<br>
+- Karena nilai harapan &lt; biaya, maka secara matematis tidak menguntungkan.
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Seorang siswa memiliki peluang 4/5 untuk lulus ujian jika belajar 2 jam sehari. Jika ia hanya belajar 1 jam, peluangnya turun menjadi 2/5. Apa keputusan terbaik yang bisa ia ambil?</li>
+<li>Dalam sebuah undian, peluang menang adalah 1/50. Hadiah utama Rp100.000, biaya tiket Rp3.000. Apakah layak membeli tiket?</li>
+<li>Seorang petani mempertimbangkan dua jenis pupuk. Pupuk A memiliki peluang 70% meningkatkan hasil panen, pupuk B hanya 40%. Mana yang sebaiknya dipilih?</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Bagaimana peluang memengaruhi cara kamu mengambil keputusan?</li>
+<li>Apakah kamu pernah membuat keputusan berdasarkan peluang? Bagaimana hasilnya?</li>
+<li>Apa yang bisa kamu lakukan jika peluang tidak pasti atau tidak diketahui?</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

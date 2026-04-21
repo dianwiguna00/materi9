@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 14</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu menggeser ikon atau gambar di layar ponsel tanpa mengubah bentuknya?</li>
+<li>Mengapa menurutmu suatu bangun bisa berpindah tempat tetapi tetap terlihat sama persis?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Menggeser gambar atau objek pada aplikasi desain dan presentasi.</li>
+<li>Memindahkan karakter atau benda pada permainan digital tanpa mengubah ukurannya.</li>
+<li>Mengatur ulang posisi denah ruangan atau peta sederhana dengan cara digeser.</li>
+<li>Mengamati pergerakan objek pada animasi yang berpindah secara lurus dan sejajar.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa dapat melakukan translasi (pergeseran) titik dan bangun datar pada bidang koordinat Kartesius menggunakan vektor translasi, serta memahami pengaruhnya terhadap posisi bangun.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Mengamati contoh titik dan bangun datar yang mengalami pergeseran pada bidang koordinat.</li>
+<li>Berdiskusi dalam kelompok untuk menentukan arah dan jarak perpindahan bangun.</li>
+<li>Mengerjakan latihan menentukan hasil translasi titik dan bangun datar.</li>
+<li>Menyampaikan hasil pekerjaan dan membahas pengaruh translasi terhadap posisi bangun.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+Translasi adalah transformasi geometri yang memindahkan suatu titik atau bangun datar sejauh dan searah vektor tertentu tanpa mengubah bentuk atau ukuran.<br><br>
+<strong>1. Vektor Translasi</strong><br>
+Vektor translasi ditulis dalam bentuk:<br>
+(x, y) → (x + a, y + b)<br>
+di mana a dan b adalah komponen vektor translasi.<br><br>
+<strong>2. Sifat Translasi</strong><br>
+Bentuk dan ukuran bangun tetap<br>
+Posisi bangun berubah<br>
+Tidak ada perubahan orientasi
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1: Translasi Titik</strong><br>
+Titik A(2, 3) ditranslasikan oleh vektor (4, -2). Tentukan koordinat bayangannya.<br>
+Penyelesaian:<br>
+A' = (2 + 4, 3 - 2) = (6, 1)<br><br>
+<strong>Contoh Soal 2: Translasi Bangun Datar</strong><br>
+Segitiga dengan titik-titik P(1, 2), Q(3, 2), dan R(2, 4) ditranslasikan oleh vektor (-2, 3). Tentukan koordinat bayangan masing-masing titik.<br>
+Penyelesaian:<br>
+P' = (1 - 2, 2 + 3) = (-1, 5)<br>
+Q' = (3 - 2, 2 + 3) = (1, 5)<br>
+R' = (2 - 2, 4 + 3) = (0, 7)
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Tentukan hasil translasi titik berikut:<br>
+a. B(5, -1) oleh vektor (2, 4)<br>
+b. C(-3, 0) oleh vektor (-1, -2)</li>
+<li>Bangun persegi panjang dengan titik-titik A(0, 0), B(4, 0), C(4, 2), dan D(0, 2) ditranslasikan oleh vektor (3, -1). Tentukan koordinat bayangan masing-masing titik.</li>
+<li>Jelaskan bagaimana translasi memengaruhi posisi bangun tetapi tidak mengubah bentuk atau ukuran.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Bagaimana kamu menentukan arah dan jarak translasi dari suatu titik?</li>
+<li>Dalam kehidupan nyata, di mana kamu pernah melihat konsep translasi digunakan?</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

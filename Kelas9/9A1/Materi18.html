@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 18</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu melihat perubahan posisi suatu gambar pada peta, desain, atau animasi digital?</li>
+<li>Mengapa menurutmu satu masalah nyata bisa melibatkan lebih dari satu jenis transformasi geometri?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Menentukan posisi objek pada peta digital yang mengalami pergeseran atau perputaran.</li>
+<li>Mengamati perubahan posisi dan ukuran gambar dalam desain logo atau poster.</li>
+<li>Memahami pergerakan objek pada animasi, game, atau simulasi digital.</li>
+<li>Menafsirkan bentuk dan posisi bangunan pada denah atau perencanaan ruang.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa dapat menyelesaikan masalah kontekstual yang melibatkan refleksi, translasi, rotasi, dan dilatasi, serta menafsirkan hasil transformasi dalam konteks kehidupan nyata.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Mengamati permasalahan kontekstual yang melibatkan perubahan posisi atau ukuran bangun.</li>
+<li>Berdiskusi dalam kelompok untuk menentukan jenis transformasi yang sesuai.</li>
+<li>Mengerjakan latihan menyelesaikan masalah kontekstual transformasi geometri.</li>
+<li>Menyajikan hasil penyelesaian dan membahas strategi yang digunakan bersama teman.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+Masalah kontekstual dalam transformasi geometri mengajak siswa:<br>
+Mengidentifikasi jenis transformasi yang terjadi.<br>
+Menggunakan rumus transformasi untuk menyelesaikan soal.<br>
+Menafsirkan hasil transformasi dalam konteks nyata (misalnya desain, peta, animasi, arsitektur).<br>
+Transformasi dapat terjadi secara tunggal atau gabungan, dan dapat diterapkan pada titik maupun bangun datar.
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1: Translasi dalam Desain</strong><br>
+Sebuah logo berbentuk segitiga dengan titik-titik A(2, 1), B(4, 1), dan C(3, 3) dipindahkan 5 satuan ke kanan dan 2 satuan ke atas. Tentukan koordinat hasil translasi.<br>
+Penyelesaian:<br>
+Vektor translasi: (5, 2)<br>
+A menjadi (7, 3), B menjadi (9, 3), C menjadi (8, 5)<br><br>
+<strong>Contoh Soal 2: Rotasi dalam Peta</strong><br>
+Titik D(6, -2) mewakili posisi menara. Titik tersebut diputar 180° terhadap titik pusat (0, 0). Tentukan posisi baru menara.<br>
+Penyelesaian:<br>
+D' = (-6, 2)<br><br>
+<strong>Contoh Soal 3: Dilatasi dalam Arsitektur</strong><br>
+Sebuah denah bangunan diperkecil dengan faktor skala 0.25. Titik sudut bangunan E(8, 4) menjadi berapa?<br>
+Penyelesaian:<br>
+E' = (2, 1)
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Sebuah bangun datar dengan titik-titik F(1, 2), G(3, 2), dan H(2, 4) direfleksikan terhadap sumbu y. Tentukan koordinat bayangan dan gambarkan hasilnya.</li>
+<li>Sebuah objek dalam animasi bergerak dari titik I(0, 0), J(2, 0), dan K(1, 2) dengan translasi vektor (-3, 1). Tentukan posisi baru objek.</li>
+<li>Sebuah logo diputar 90° berlawanan arah jarum jam terhadap titik pusat (0, 0). Titik awal L(4, -1). Tentukan posisi setelah rotasi.</li>
+<li>Jelaskan bagaimana kamu menentukan jenis transformasi yang sesuai untuk menyelesaikan masalah dalam desain atau pergerakan objek.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Dari keempat jenis transformasi, mana yang paling sering kamu temui dalam kehidupan sehari-hari?</li>
+<li>Bagaimana pemahaman transformasi geometri membantumu dalam bidang lain seperti seni, teknologi, atau ilmu pengetahuan?</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

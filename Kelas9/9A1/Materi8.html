@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 8</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu melihat bentuk akar dan bentuk pangkat pecahan yang terlihat berbeda tetapi nilainya sama?</li>
+<li>Mengapa menurutmu matematika menyediakan dua cara penulisan yang berbeda untuk satu bentuk bilangan?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Menuliskan hasil perhitungan agar lebih ringkas dan mudah diolah dalam perhitungan lanjutan.</li>
+<li>Membaca dan memahami simbol matematika yang sering muncul pada kalkulator atau buku sains.</li>
+<li>Mengubah bentuk penulisan bilangan agar sesuai dengan kebutuhan perhitungan tertentu.</li>
+<li>Mempermudah operasi hitung pada bilangan yang melibatkan akar dan pangkat.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa dapat mengubah bentuk akar ke bentuk eksponen dan sebaliknya, serta memahami hubungan antara keduanya dalam konteks operasi matematika.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Mengamati contoh pasangan bentuk akar dan bentuk eksponen yang disajikan guru.</li>
+<li>Berdiskusi dalam kelompok untuk mencocokkan bentuk akar dengan bentuk eksponen yang setara.</li>
+<li>Mengerjakan latihan mengubah bentuk akar ke eksponen dan sebaliknya secara mandiri.</li>
+<li>Membahas hasil pekerjaan dan menyimpulkan temuan bersama teman.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+<strong>1. Hubungan antara Akar dan Eksponen</strong><br>
+Bentuk akar dapat ditulis sebagai bentuk eksponen dengan pangkat pecahan.<br>
+Akar kuadrat: √a = a1/2<br>
+Akar pangkat tiga: ∛a = a1/3<br>
+Secara umum: √n(aᵐ) = aᵐ/ⁿ<br><br>
+<strong>2. Contoh Konversi</strong><br>
+√5 = 51/2<br>
+∛8 = 81/3<br>
+4√(x3) = x3/4
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1: Akar ke Eksponen</strong><br>
+Ubah bentuk berikut ke bentuk eksponen:<br>
+√7<br>
+Penyelesaian:<br>
+√7 = 71/2<br><br>
+<strong>Contoh Soal 2: Eksponen ke Akar</strong><br>
+Ubah bentuk berikut ke bentuk akar:<br>
+x3/2<br>
+Penyelesaian:<br>
+x3/2 = √(x3)<br><br>
+<strong>Contoh Soal 3: Operasi dengan Pangkat Pecahan</strong><br>
+Hitung: 161/2<br>
+Penyelesaian:<br>
+161/2 = √16 = 4
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Ubah ke bentuk eksponen:<br>
+√10<br>
+∛x<br>
+4√(y3)</li>
+<li>Ubah ke bentuk akar:<br>
+a2/3<br>
+b5/2<br>
+x3/4</li>
+<li>Hitung nilai dari:<br>
+251/2<br>
+81/3<br>
+813/4</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Bagaimana bentuk eksponen membantu menyederhanakan operasi bentuk akar?</li>
+<li>Dalam konteks apa kamu bisa menggunakan bentuk eksponen dari akar dalam pelajaran lain?</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

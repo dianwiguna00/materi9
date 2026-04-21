@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 9</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu menghitung isi air dalam tangki, drum, atau galon di rumah?</li>
+<li>Mengapa menurutmu dalam situasi tertentu kita perlu menghitung volume, sedangkan pada situasi lain menghitung luas permukaan?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Menentukan kapasitas air yang dapat ditampung oleh tangki atau drum berbentuk tabung.</li>
+<li>Menghitung luas permukaan benda yang akan dicat atau dibungkus, seperti bola atau tabung.</li>
+<li>Menentukan banyaknya bahan yang dibutuhkan untuk membuat wadah atau kemasan.</li>
+<li>Menafsirkan hasil perhitungan volume atau luas permukaan dalam konteks penggunaan sehari-hari.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu menyelesaikan masalah nyata yang melibatkan perhitungan volume dan luas permukaan tabung, kerucut, dan bola, serta menginterpretasikan hasilnya dalam konteks kehidupan sehari-hari.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Mengamati beberapa permasalahan kontekstual yang berkaitan dengan volume dan luas permukaan bangun sisi lengkung.</li>
+<li>Berdiskusi dalam kelompok untuk menentukan informasi yang diketahui dan yang ditanyakan.</li>
+<li>Mengerjakan latihan pemecahan masalah kontekstual secara bertahap dan sistematis.</li>
+<li>Menyampaikan hasil penyelesaian dan mendiskusikan cara menafsirkan hasilnya bersama teman.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+Masalah kontekstual melibatkan penerapan rumus volume dan luas permukaan dalam situasi nyata, seperti:<br>
+Menghitung kapasitas wadah (tabung).<br>
+Menentukan bahan pelapis atau cat (luas permukaan).<br>
+Menghitung isi atau volume benda berbentuk bola atau kerucut.
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1 (Volume Tabung dalam Konteks)</strong><br>
+Sebuah tangki air berbentuk tabung memiliki jari-jari 50 cm dan tinggi 120 cm. Berapa liter air yang dapat ditampung tangki tersebut?<br>
+Penyelesaian:<br>
+Volume = π r² t = π × 50² × 120 = 942.477 cm³<br>
+Konversi ke liter: 942.477 ÷ 1000 = 942,48 liter<br><br>
+<strong>Contoh Soal 2 (Luas Permukaan Bola dalam Konteks)</strong><br>
+Sebuah bola akan dicat seluruh permukaannya. Jika jari-jari bola adalah 14 cm, berapa luas permukaan yang akan dicat?<br>
+Penyelesaian:<br>
+Luas permukaan = 4π r² = 4π × 14² = 2.463,0 cm²<br><br>
+<strong>Contoh Soal 3 (Volume Kerucut dalam Konteks)</strong><br>
+Sebuah es krim berbentuk kerucut memiliki jari-jari 3 cm dan tinggi 10 cm. Berapa volume es krim yang dapat ditampung?<br>
+Penyelesaian:<br>
+Volume = (1/3) π r² t = (1/3) π × 3² × 10 = 94,2 cm³
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Sebuah drum berbentuk tabung memiliki diameter 60 cm dan tinggi 100 cm. Hitung kapasitasnya dalam liter.</li>
+<li>Sebuah bola plastik akan dibungkus dengan plastik pelapis. Jika jari-jari bola 10 cm, hitung luas plastik yang dibutuhkan.</li>
+<li>Sebuah kerucut memiliki jari-jari 5 cm dan tinggi 12 cm. Hitung volumenya dan jelaskan dalam konteks wadah minuman.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Bagaimana kamu menentukan apakah harus menggunakan rumus volume atau luas permukaan dalam suatu masalah?</li>
+<li>Dalam kehidupan sehari-hari, kapan kamu pernah menghitung volume atau luas permukaan benda?</li>
+<li>Apa tantangan yang kamu hadapi saat menerapkan rumus dalam konteks nyata?</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

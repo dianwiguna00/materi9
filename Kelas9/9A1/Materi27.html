@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 27</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu mencoba memprediksi hasil suatu permainan atau undian dalam kehidupan sehari-hari?</li>
+<li>Mengapa menurutmu memahami peluang dapat membantu menyelesaikan masalah nyata dengan lebih tepat?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Memperkirakan peluang menang dalam permainan atau undian yang sering ditemui.</li>
+<li>Menentukan pilihan terbaik berdasarkan kemungkinan hasil yang ada.</li>
+<li>Memahami risiko dan peluang dalam pengambilan keputusan sederhana.</li>
+<li>Menafsirkan hasil perhitungan peluang dalam situasi kehidupan nyata.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu menerapkan konsep peluang dalam menyelesaikan masalah nyata yang melibatkan kejadian tunggal maupun gabungan.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Mengamati beberapa contoh masalah kontekstual yang berkaitan dengan peluang.</li>
+<li>Berdiskusi dalam kelompok untuk menentukan ruang sampel dan kejadian yang terlibat.</li>
+<li>Mengerjakan latihan penyelesaian masalah peluang secara bertahap.</li>
+<li>Menyampaikan hasil penyelesaian dan mendiskusikan strategi yang digunakan bersama teman.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+Pada pertemuan ini, siswa diajak untuk:<br>
+Mengintegrasikan pemahaman tentang ruang sampel, peluang kejadian sederhana, frekuensi harapan, dan peluang gabungan.<br>
+Menyelesaikan masalah kontekstual yang mencerminkan situasi nyata, seperti permainan, pengambilan keputusan, atau eksperimen.<br><br>
+Langkah-langkah menyelesaikan masalah peluang:<br>
+Pahami konteks dan identifikasi kejadian yang dimaksud.<br>
+Tentukan ruang sampel dan kejadian yang diinginkan.<br>
+Hitung peluang menggunakan rumus yang sesuai.<br>
+Jika perlu, gunakan diagram pohon atau tabel.<br>
+Interpretasikan hasil dalam konteks soal.
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1</strong><br>
+Dalam sebuah undian, terdapat 100 kupon dan hanya 5 di antaranya berhadiah. Jika seseorang membeli 1 kupon, berapa peluang ia mendapatkan hadiah?<br>
+Penyelesaian:<br>
+Jumlah kupon = 100<br>
+Kupon berhadiah = 5<br>
+Peluang menang = 5/100 = 1/20<br><br>
+<strong>Contoh Soal 2</strong><br>
+Sebuah kantong berisi 3 bola merah, 2 bola biru, dan 5 bola hijau. Jika diambil satu bola secara acak, berapa peluang terambil bola bukan merah?<br>
+Penyelesaian:<br>
+Total bola = 10<br>
+Bola bukan merah = 7<br>
+Peluang = 7/10<br><br>
+<strong>Contoh Soal 3</strong><br>
+Sebuah spinner memiliki 4 bagian sama besar: A, B, C, dan D. Spinner diputar dua kali. Berapa peluang muncul A pada putaran pertama dan B pada putaran kedua?<br>
+Penyelesaian:<br>
+Peluang A = 1/4<br>
+Peluang B = 1/4<br>
+Peluang gabungan = 1/4 × 1/4 = 1/16
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Dalam sebuah kelas, 60% siswa menyukai matematika. Jika dipilih 5 siswa secara acak, berapa frekuensi harapan siswa yang menyukai matematika?</li>
+<li>Sebuah dadu dilempar dua kali. Berapa peluang jumlah kedua mata dadu adalah 7?</li>
+<li>Dalam sebuah permainan, peluang menang adalah 2/5. Jika seseorang bermain 25 kali, berapa frekuensi harapan menangnya?</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Bagaimana kamu menerapkan konsep peluang dalam menyelesaikan masalah nyata?</li>
+<li>Apa tantangan yang kamu hadapi saat menyelesaikan soal kontekstual?</li>
+<li>Bagaimana kamu bisa menggunakan peluang untuk membuat keputusan yang lebih baik?</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

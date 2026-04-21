@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 5</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu menemukan bentuk bilangan berpangkat yang panjang dan terlihat rumit?</li>
+<li>Menurutmu, mengapa perlu ada cara yang lebih singkat untuk menuliskan dan menghitung bilangan berpangkat?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Menyederhanakan perhitungan angka besar agar lebih cepat dan efisien.</li>
+<li>Mempermudah penulisan hasil perhitungan dalam sains dan teknologi.</li>
+<li>Mengurangi kesalahan saat menghitung operasi bilangan berpangkat yang bertahap.</li>
+<li>Membantu memahami perhitungan dalam penggunaan alat digital atau kalkulator.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa dapat menyederhanakan ekspresi bilangan berpangkat dengan menggunakan sifat-sifat eksponen secara sistematis dan tepat.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Mengamati beberapa bentuk bilangan berpangkat yang telah dan belum disederhanakan.</li>
+<li>Berdiskusi dalam kelompok untuk menentukan langkah penyederhanaan yang tepat.</li>
+<li>Mengerjakan latihan penyederhanaan bilangan berpangkat secara mandiri.</li>
+<li>Membandingkan hasil kerja dan mendiskusikan perbedaan langkah penyelesaian bersama teman.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+Untuk menyederhanakan bilangan berpangkat, kita gunakan sifat-sifat eksponen berikut:<br>
+1. Perkalian basis sama:<br>
+aᵐ × aⁿ = a{m+n}<br>
+2. Pembagian basis sama:<br>
+aᵐ / aⁿ = a{m-n}<br>
+3. Pangkat dari pangkat:<br>
+(aᵐ)ⁿ = a{m × n}<br>
+4. Pangkat nol:<br>
+a⁰ = 1 (untuk a ≠ 0)<br>
+5. Pangkat negatif:<br>
+a⁻ⁿ = 1 / aⁿ
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1: Gabungan Operasi</strong><br>
+Sederhanakan:<br>
+(2³)² × 2⁻⁴ / 2²<br>
+Langkah 1: (2³)² = 2{3 × 2} = 2⁶<br>
+Langkah 2: 2⁶ × 2⁻⁴ = 2{6 + (-4)} = 2²<br>
+Langkah 3: 2² / 2² = 2{2 - 2} = 2⁰ = 1<br><br>
+<strong>Contoh Soal 2: Pangkat Negatif dan Nol</strong><br>
+Sederhanakan:<br>
+5⁻² × 5⁴ / 5³<br>
+Langkah: 5⁻² × 5⁴ = 5{-2 + 4} = 5²<br>
+5² / 5³ = 5{2 - 3} = 5⁻¹ = 1 / 5
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>a. (3²)³ / 3⁴<br>
+b. 7⁻¹ × 7⁵ / 7²<br>
+c. (4³)² × 4⁻⁵ / 4⁴</li>
+<li>a. (2⁰ + 2⁻¹) / 2¹<br>
+b. (x²)³ / x⁴</li>
+<li>Jelaskan langkah-langkah menyederhanakan ekspresi: (a²)⁴ × a⁻³ / a⁵</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Apa strategi yang kamu gunakan untuk menyederhanakan ekspresi berpangkat?</li>
+<li>Bagaimana kamu memastikan urutan operasi eksponen dilakukan dengan benar?</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

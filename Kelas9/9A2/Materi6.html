@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 6</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu memperhatikan bentuk kaleng, topi ulang tahun, atau bola saat bermain?</li>
+<li>Mengapa menurutmu benda-benda tersebut tetap memiliki bentuk khas meskipun ukurannya berbeda?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Mengamati kaleng minuman atau tabung gas sebagai contoh benda berbentuk tabung.</li>
+<li>Mengamati topi pesta atau corong sebagai contoh benda berbentuk kerucut.</li>
+<li>Mengamati bola olahraga atau bola lampu sebagai contoh benda berbentuk bola.</li>
+<li>Mengelompokkan benda sehari-hari berdasarkan bentuk permukaannya.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu mengidentifikasi dan menjelaskan sifat-sifat bangun ruang sisi lengkung: tabung, kerucut, dan bola, melalui pengamatan dan diskusi.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Mengamati beberapa benda nyata di sekitar kelas yang berbentuk tabung, kerucut, dan bola.</li>
+<li>Berdiskusi dalam kelompok untuk mengidentifikasi bagian dan ciri masing-masing bangun ruang.</li>
+<li>Mengerjakan latihan mengelompokkan benda berdasarkan kesamaan bentuk permukaannya.</li>
+<li>Menyampaikan hasil diskusi tentang sifat-sifat bangun ruang sisi lengkung kepada teman.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+<strong>Tabung (Silinder)</strong><br>
+Memiliki 2 sisi alas dan tutup berbentuk lingkaran.<br>
+Memiliki 1 sisi lengkung (selimut tabung).<br>
+Memiliki 2 rusuk (lingkaran).<br>
+Tidak memiliki titik sudut.<br><br>
+<strong>Kerucut</strong><br>
+Memiliki 1 alas berbentuk lingkaran.<br>
+Memiliki 1 sisi lengkung (selimut kerucut).<br>
+Memiliki 1 titik puncak.<br>
+Tidak memiliki rusuk sejati, hanya satu rusuk lengkung.<br><br>
+<strong>Bola</strong><br>
+Tidak memiliki alas, rusuk, atau titik sudut.<br>
+Memiliki 1 sisi lengkung yang membentuk seluruh permukaan bola.<br>
+Semua titik pada permukaan bola berjarak sama dari titik pusat.
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1</strong><br>
+Sebutkan sifat-sifat dari bangun berikut:<br>
+a. Tabung<br>
+b. Kerucut<br>
+c. Bola<br>
+Jawaban:<br>
+- Tabung: 2 alas, 1 selimut, 2 rusuk, tidak ada titik sudut.<br>
+- Kerucut: 1 alas, 1 selimut, 1 puncak, 1 rusuk lengkung.<br>
+- Bola: 1 sisi lengkung, tidak ada alas, rusuk, atau titik sudut.<br><br>
+<strong>Contoh Soal 2</strong><br>
+Perhatikan benda-benda berikut:<br>
+- Kaleng susu<br>
+- Topi ulang tahun<br>
+- Bola basket<br>
+Tentukan bangun ruang sisi lengkung yang sesuai untuk masing-masing benda!<br>
+Jawaban:<br>
+- Kaleng susu → Tabung<br>
+- Topi ulang tahun → Kerucut<br>
+- Bola basket → Bola
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Gambarlah masing-masing bangun ruang sisi lengkung: tabung, kerucut, dan bola. Tuliskan bagian-bagiannya.</li>
+<li>Carilah 2 benda di sekitarmu yang berbentuk tabung, kerucut, dan bola.</li>
+<li>Jelaskan perbedaan antara tabung dan kerucut berdasarkan jumlah alas dan bentuk sisi lengkungnya.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Apa perbedaan utama antara tabung, kerucut, dan bola?</li>
+<li>Dari ketiga bangun tersebut, mana yang paling sering kamu temui dalam kehidupan sehari-hari?</li>
+<li>Bagaimana kamu bisa mengenali bangun ruang sisi lengkung hanya dari bentuknya?</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

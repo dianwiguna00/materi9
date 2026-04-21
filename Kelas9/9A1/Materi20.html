@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 20</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu melihat pola, gambar, atau animasi yang tampak sama tetapi posisinya berubah-ubah?</li>
+<li>Mengapa menurutmu seni, desain, dan teknologi membutuhkan aturan matematika agar hasilnya rapi dan konsisten?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Mengamati penggunaan simetri, pergeseran, dan perputaran pada motif batik atau ornamen bangunan.</li>
+<li>Melihat penerapan transformasi pada desain logo, poster, dan ilustrasi digital.</li>
+<li>Memahami pergerakan objek dalam animasi, video game, atau antarmuka aplikasi.</li>
+<li>Mengamati penggunaan skala pada peta, denah, atau model bangunan.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa dapat mengidentifikasi dan menjelaskan penerapan transformasi geometri (refleksi, translasi, rotasi, dan dilatasi) dalam berbagai bidang seperti seni rupa, desain grafis, arsitektur, dan teknologi digital.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Mengamati contoh karya seni, desain, atau tampilan digital yang memanfaatkan transformasi geometri.</li>
+<li>Berdiskusi dalam kelompok untuk mengidentifikasi jenis transformasi yang digunakan.</li>
+<li>Mengerjakan latihan mengelompokkan contoh penerapan transformasi dalam berbagai bidang.</li>
+<li>Menyampaikan hasil diskusi dan berbagi contoh transformasi yang ditemukan di sekitar siswa.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+<strong>Seni dan Desain:</strong> Refleksi digunakan dalam simetri, rotasi dalam pola mandala, translasi dalam pengulangan motif, dan dilatasi dalam memperbesar/memperkecil gambar.<br>
+<strong>Teknologi dan Animasi:</strong> Digunakan dalam pemrograman grafis, animasi, dan game untuk manipulasi objek digital.<br>
+<strong>Arsitektur dan Teknik:</strong> Digunakan dalam perencanaan bangunan dan penggandaan elemen struktur.
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1: Refleksi dalam Batik</strong><br>
+Titik A(3, 2) direfleksikan terhadap sumbu y → A' = (-3, 2)<br><br>
+<strong>Contoh Soal 2: Translasi dalam Desain Pola</strong><br>
+Titik B(1, 1) ditranslasikan dua kali ke kanan sejauh 5 satuan → B' = (11, 1)<br><br>
+<strong>Contoh Soal 3: Dilatasi dalam Desain Logo</strong><br>
+Titik C(4, 2) diperbesar dengan faktor skala 1.5 → C' = (6, 3)
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Sebuah pola simetris memiliki titik D(5, -2). Jika dicerminkan terhadap sumbu x, tentukan bayangannya. Dalam konteks apa refleksi ini bisa digunakan?</li>
+<li>Sebuah objek dalam animasi bergerak dari titik E(0, 0) ke kanan 3 satuan dan ke atas 2 satuan setiap frame. Tentukan posisi E setelah 4 frame.</li>
+<li>Sebuah gambar diperbesar dengan faktor skala 0.75. Jika titik F(8, 4) adalah bagian dari gambar asli, tentukan posisi titik setelah dilatasi.</li>
+<li>Jelaskan bagaimana transformasi geometri membantu dalam menciptakan pola yang estetis dan efisien dalam desain grafis atau arsitektur.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Dari semua jenis transformasi, mana yang menurutmu paling sering digunakan dalam dunia nyata? Mengapa?</li>
+<li>Bagaimana pemahaman tentang transformasi membantumu dalam bidang seni, teknologi, atau desain?</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

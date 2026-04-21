@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 5</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu mencoba mengukur tinggi pohon atau tiang hanya dengan melihat bayangannya?</li>
+<li>Bagaimana caramu menaksir tinggi suatu benda tanpa alat ukur langsung?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Mengukur tinggi pohon di halaman sekolah menggunakan perbandingan panjang bayangan.</li>
+<li>Menentukan tinggi tiang bendera dengan bantuan benda lain sebagai pembanding.</li>
+<li>Memperkirakan tinggi gedung dari bayangannya pada waktu tertentu.</li>
+<li>Menggunakan benda sehari-hari seperti tongkat atau penggaris untuk membantu pengukuran tidak langsung.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu menggunakan prinsip kesebangunan untuk menentukan tinggi benda yang sulit diukur secara langsung melalui teknik perbandingan bayangan atau alat bantu lainnya.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Mengamati situasi pengukuran tinggi benda menggunakan bayangan atau alat bantu sederhana.</li>
+<li>Berdiskusi dalam kelompok untuk menentukan perbandingan yang sesuai.</li>
+<li>Mengerjakan latihan menentukan tinggi benda menggunakan prinsip kesebangunan.</li>
+<li>Menyampaikan hasil perhitungan dan mendiskusikan langkah penyelesaiannya bersama teman.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+Dalam kehidupan nyata, kita bisa menggunakan <strong>kesebangunan segitiga</strong> untuk mengukur tinggi benda seperti pohon, tiang, atau gedung tanpa harus memanjatnya. Caranya adalah dengan:<br>
+Menggunakan bayangan: Jika dua benda berdiri tegak dan terkena cahaya matahari yang sama, maka bayangan yang terbentuk akan membentuk segitiga yang sebangun.<br>
+Menggunakan alat bantu seperti tongkat atau cermin untuk membentuk segitiga sebangun.<br>
+Prinsip yang digunakan:<br>
+Tinggi benda 1 / Bayangan benda 1 = Tinggi benda 2 / Bayangan benda 2
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1 (Bayangan)</strong><br>
+Seorang siswa menancapkan tongkat setinggi 1,2 meter dan bayangannya 1,5 meter. Di saat yang sama, bayangan sebuah tiang adalah 6 meter. Berapa tinggi tiang tersebut?<br>
+Penyelesaian:<br>
+1,2 / 1,5 = x / 6 → x = (1,2 / 1,5) × 6 = 4,8 meter<br><br>
+<strong>Contoh Soal 2 (Cermin)</strong><br>
+Seorang siswa meletakkan cermin di tanah sejauh 2 meter dari tiang. Ia berdiri sejauh 0,5 meter dari cermin dan melihat puncak tiang melalui pantulan. Jika tinggi mata siswa dari tanah adalah 1,4 meter dan jarak tiang ke cermin adalah 3 meter, berapa tinggi tiang?<br>
+Penyelesaian:<br>
+1,4 / 0,5 = x / 3 → x = (1,4 / 0,5) × 3 = 8,4 meter
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Sebuah tongkat setinggi 1,5 meter memiliki bayangan 2 meter. Sebuah pohon memiliki bayangan 10 meter. Berapa tinggi pohon?</li>
+<li>Seorang siswa berdiri 1 meter dari cermin dan melihat puncak tiang melalui pantulan. Tinggi mata siswa 1,6 meter. Jika jarak tiang ke cermin adalah 4 meter, berapa tinggi tiang?</li>
+<li>Buatlah sketsa situasi nyata yang melibatkan kesebangunan untuk mengukur tinggi benda, lalu jelaskan perbandingan yang digunakan.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Apa keuntungan menggunakan prinsip kesebangunan dalam mengukur tinggi benda?</li>
+<li>Apakah kamu bisa menerapkan metode ini di lingkungan sekolah atau rumah?</li>
+<li>Apa tantangan yang kamu hadapi saat menyusun perbandingan dan bagaimana kamu mengatasinya?</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

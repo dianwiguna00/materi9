@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 2</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu membandingkan dua gambar dan merasa bentuknya sama, tetapi ukurannya tidak sama?</li>
+<li>Bagaimana caramu memastikan dua bangun datar benar-benar sama atau hanya tampak mirip saja?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Membandingkan dua rambu lalu lintas yang sama bentuknya tetapi berbeda ukuran.</li>
+<li>Mengamati pola bangun pada batik atau motif lantai yang bentuknya serupa.</li>
+<li>Membandingkan dua buku tulis dengan ukuran sama atau berbeda.</li>
+<li>Menilai apakah dua gambar pada denah atau peta memiliki ukuran yang sama persis.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu mengidentifikasi bangun datar yang sebangun dan kongruen berdasarkan sifat-sifat sudut dan sisi yang bersesuaian.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Mengamati beberapa pasang bangun datar yang ditampilkan guru.</li>
+<li>Berdiskusi dalam kelompok untuk menentukan bangun yang sebangun dan yang kongruen.</li>
+<li>Mengerjakan latihan mengidentifikasi bangun berdasarkan kesamaan sudut dan sisi.</li>
+<li>Menyampaikan hasil diskusi kelompok dan menanggapi pendapat kelompok lain.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+<strong>Bangun Sebangun</strong><br>
+Sudut-sudut yang bersesuaian sama besar.<br>
+Sisi-sisi yang bersesuaian sebanding (memiliki rasio yang sama).<br><br>
+<strong>Bangun Kongruen</strong><br>
+Sudut-sudut yang bersesuaian sama besar.<br>
+Sisi-sisi yang bersesuaian sama panjang.<br>
+Bangun dapat ditumpangtindihkan secara tepat.
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1 (Sebangun)</strong><br>
+Perhatikan dua segitiga berikut:<br>
+- Segitiga A memiliki sudut: 40°, 60°, dan 80°.<br>
+- Segitiga B memiliki sudut: 40°, 60°, dan 80°.<br>
+Jika panjang sisi segitiga A adalah 4 cm, 6 cm, dan 8 cm, dan panjang sisi segitiga B adalah 6 cm, 9 cm, dan 12 cm, apakah kedua segitiga sebangun?<br>
+Jawaban:<br>
+- Sudut-sudut sama besar ✅<br>
+- Perbandingan sisi: 4:6 = 6:9 = 8:12 → semua rasio = 2:3 ✅<br>
+Kesimpulan: Sebangun<br><br>
+<strong>Contoh Soal 2 (Kongruen)</strong><br>
+Dua persegi panjang masing-masing memiliki panjang 10 cm dan lebar 5 cm. Apakah kedua bangun kongruen?<br>
+Jawaban:<br>
+- Sudut-sudut sama besar ✅<br>
+- Sisi-sisi sama panjang ✅<br>
+Kesimpulan: Kongruen
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Perhatikan dua segitiga berikut:<br>
+- Segitiga X: sudut 30°, 60°, 90°, sisi 3 cm, 5 cm, 6 cm.<br>
+- Segitiga Y: sudut 30°, 60°, 90°, sisi 6 cm, 10 cm, 12 cm.<br>
+Apakah segitiga X dan Y sebangun atau kongruen?</li>
+<li>Dua lingkaran memiliki jari-jari masing-masing 7 cm dan 7 cm. Apakah kedua lingkaran tersebut sebangun, kongruen, atau keduanya?</li>
+<li>Buatlah dua gambar bangun datar yang:<br>
+- Sebangun tetapi tidak kongruen.<br>
+- Kongruen tetapi tidak sebangun (apakah mungkin? Jelaskan!).</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Apa saja syarat yang harus dipenuhi agar dua bangun datar dikatakan sebangun?</li>
+<li>Bagaimana cara membedakan bangun yang sebangun dan kongruen hanya dari gambar?</li>
+<li>Dalam kehidupan nyata, di mana kamu bisa menemukan contoh bangun yang sebangun atau kongruen?</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 15</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu melihat benda yang diputar, seperti jarum jam atau kipas angin, lalu memperhatikan perubahan posisinya?</li>
+<li>Mengapa suatu titik atau bangun bisa menghasilkan posisi baru ketika diputar dengan sudut tertentu?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Mengamati perputaran jarum jam, roda sepeda, atau baling-baling kipas sebagai contoh rotasi.</li>
+<li>Melihat perubahan posisi gambar saat layar ponsel diputar.</li>
+<li>Mengamati gerakan pemain olahraga yang berputar pada satu titik tertentu.</li>
+<li>Menggunakan rotasi pada aplikasi desain atau permainan digital.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa dapat melakukan rotasi titik dan bangun datar terhadap titik pusat (biasanya titik asal) dengan sudut tertentu (90°, 180°, 270°) pada bidang koordinat Kartesius.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Mengamati contoh titik atau bangun yang diputar dengan sudut tertentu pada bidang koordinat.</li>
+<li>Berdiskusi dalam kelompok untuk menentukan arah dan besar sudut rotasi yang terjadi.</li>
+<li>Mengerjakan latihan menentukan hasil rotasi titik atau bangun datar.</li>
+<li>Membahas hasil pekerjaan dan menyamakan pemahaman tentang arah dan sudut rotasi.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+Rotasi (Perputaran) adalah transformasi yang memutar suatu titik atau bangun datar terhadap titik pusat dengan sudut tertentu dan arah tertentu (searah atau berlawanan arah jarum jam).<br><br>
+<strong>Rotasi terhadap titik pusat (0, 0)</strong><br>
+90° berlawanan jarum jam: (x, y) → (-y, x)<br>
+180° bebas arah: (x, y) → (-x, -y)<br>
+270° berlawanan jarum jam: (x, y) → (y, -x)
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1: Rotasi 90° ccw</strong><br>
+Titik A(2, 5) diputar 90° berlawanan arah jarum jam terhadap titik pusat (0, 0). Tentukan koordinat bayangannya.<br>
+Penyelesaian:<br>
+A' = (-5, 2)<br><br>
+<strong>Contoh Soal 2: Rotasi 180°</strong><br>
+Titik B(-3, 4) diputar 180° terhadap titik pusat (0, 0).<br>
+Penyelesaian:<br>
+B' = (3, -4)<br><br>
+<strong>Contoh Soal 3: Rotasi 270° ccw</strong><br>
+Titik C(1, -2) diputar 270° berlawanan arah jarum jam terhadap titik pusat (0, 0).<br>
+Penyelesaian:<br>
+C' = (-2, -1)
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Tentukan hasil rotasi titik berikut terhadap titik pusat (0, 0):<br>
+a. D(4, -1) dengan sudut 90° ccw<br>
+b. E(-2, -3) dengan sudut 180°<br>
+c. F(0, 5) dengan sudut 270° ccw</li>
+<li>Bangun segitiga dengan titik-titik P(1, 1), Q(3, 1), dan R(2, 3) diputar 90° ccw terhadap titik pusat. Tentukan koordinat bayangan masing-masing titik.</li>
+<li>Jelaskan perbedaan hasil rotasi 90°, 180°, dan 270° terhadap titik pusat dalam hal arah dan posisi.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Bagaimana kamu menentukan arah dan sudut rotasi dari suatu titik?</li>
+<li>Dalam kehidupan nyata, di mana kamu pernah melihat konsep rotasi digunakan?</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

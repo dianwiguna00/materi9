@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 19</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu memindahkan suatu gambar lalu memutarnya dan mendapatkan hasil yang berbeda?</li>
+<li>Mengapa menurutmu urutan melakukan perubahan posisi atau bentuk dapat memengaruhi hasil akhir?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Mengamati pergerakan karakter dalam game yang berpindah sekaligus berputar.</li>
+<li>Memahami proses pengeditan gambar yang melibatkan geser, putar, dan ubah ukuran.</li>
+<li>Melihat perubahan posisi logo atau objek desain setelah beberapa langkah transformasi.</li>
+<li>Menafsirkan gerakan benda pada simulasi atau animasi yang dilakukan bertahap.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa dapat melakukan gabungan dua atau lebih transformasi geometri (refleksi, translasi, rotasi, dilatasi) dan menentukan hasil akhir dari transformasi tersebut secara sistematis.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Mengamati contoh bangun yang mengalami dua atau lebih transformasi secara berurutan.</li>
+<li>Berdiskusi dalam kelompok untuk menentukan urutan transformasi yang terjadi.</li>
+<li>Mengerjakan latihan gabungan transformasi pada titik atau bangun datar.</li>
+<li>Membandingkan hasil antar kelompok dan mendiskusikan pengaruh urutan transformasi.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+Gabungan transformasi adalah penerapan lebih dari satu jenis transformasi secara berurutan terhadap titik atau bangun datar.<br>
+Urutan Transformasi Penting: Hasil akhir tergantung pada urutan transformasi.<br>
+Contoh Gabungan Umum: Translasi → Rotasi, Refleksi → Dilatasi, Rotasi → Translasi → Refleksi
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1: Translasi lalu Refleksi</strong><br>
+Titik A(2, 3) ditranslasikan oleh vektor (4, -1), lalu direfleksikan terhadap sumbu x.<br>
+Langkah 1: Translasi → A' = (6, 2)<br>
+Langkah 2: Refleksi terhadap sumbu x → A'' = (6, -2)<br><br>
+<strong>Contoh Soal 2: Rotasi lalu Dilatasi</strong><br>
+Titik B(-1, 2) diputar 180° terhadap titik pusat (0, 0), lalu didilatasi dengan faktor skala 2.<br>
+Langkah 1: Rotasi 180° → B' = (1, -2)<br>
+Langkah 2: Dilatasi → B'' = (2, -4)
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Titik C(3, -2) ditranslasikan oleh vektor (-2, 3), lalu diputar 90° ccw terhadap titik pusat. Tentukan koordinat hasil akhir.</li>
+<li>Titik D(-4, 1) direfleksikan terhadap sumbu y, lalu didilatasi dengan faktor skala 0.5. Tentukan koordinat hasil akhir.</li>
+<li>Bangun segitiga dengan titik-titik E(1, 1), F(3, 1), dan G(2, 3) diputar 180°, lalu ditranslasikan oleh vektor (2, -1). Tentukan koordinat bayangan akhir masing-masing titik.</li>
+<li>Jelaskan bagaimana urutan transformasi memengaruhi hasil akhir dan berikan contoh.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Apa tantangan yang kamu hadapi saat menggabungkan dua transformasi?</li>
+<li>Bagaimana kamu memastikan urutan transformasi dilakukan dengan benar?</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

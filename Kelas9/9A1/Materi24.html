@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 24</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu mengikuti permainan berulang dan memperkirakan berapa kali kamu akan menang?</li>
+<li>Mengapa hasil yang terjadi bisa berbeda dengan perkiraan, meskipun peluangnya sama?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Memperkirakan jumlah kemenangan dalam permainan yang dilakukan berulang kali.</li>
+<li>Menafsirkan perkiraan hasil suatu kejadian dari data peluang dan jumlah percobaan.</li>
+<li>Membandingkan hasil nyata dengan hasil yang diharapkan dalam kegiatan sehari-hari.</li>
+<li>Menggunakan perkiraan untuk membuat keputusan yang lebih rasional.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa mampu menentukan frekuensi harapan dari suatu kejadian berdasarkan peluang dan jumlah percobaan, serta mengaitkannya dengan situasi nyata.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Mengamati contoh kejadian berulang beserta peluang dan jumlah percobaannya.</li>
+<li>Berdiskusi dalam kelompok untuk memperkirakan hasil yang mungkin terjadi.</li>
+<li>Mengerjakan latihan menentukan frekuensi harapan dari kejadian sederhana.</li>
+<li>Membahas hasil latihan dan membandingkan perkiraan dengan kemungkinan hasil nyata.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+Apa itu frekuensi harapan?<br>
+Frekuensi harapan adalah perkiraan jumlah kejadian yang diharapkan terjadi dalam sejumlah percobaan berdasarkan peluang kejadian tersebut.<br><br>
+Rumus frekuensi harapan:<br>
+Frekuensi Harapan = Peluang Kejadian × Jumlah Percobaan<br><br>
+Contoh kehidupan sehari-hari:<br>
+Jika peluang menang dalam suatu permainan adalah 1/5 dan kamu bermain sebanyak 20 kali, maka frekuensi harapan menang adalah:<br>
+1/5 × 20 = 4<br>
+Artinya, kamu diperkirakan menang sebanyak 4 kali.
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1</strong><br>
+Sebuah dadu dilempar sebanyak 60 kali. Berapa frekuensi harapan muncul angka 3?<br>
+Penyelesaian:<br>
+Peluang muncul angka 3 = 1/6<br>
+Jumlah percobaan = 60<br>
+Frekuensi harapan = 1/6 × 60 = 10<br><br>
+<strong>Contoh Soal 2</strong><br>
+Dalam sebuah kantong terdapat 5 bola merah dan 5 bola biru. Jika satu bola diambil secara acak dan dikembalikan, lalu dilakukan sebanyak 40 kali, berapa frekuensi harapan terambil bola biru?<br>
+Penyelesaian:<br>
+Peluang bola biru = 5/10 = 1/2<br>
+Jumlah percobaan = 40<br>
+Frekuensi harapan = 1/2 × 40 = 20
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Sebuah spinner memiliki 4 bagian sama besar: A, B, C, dan D. Jika diputar 80 kali, berapa frekuensi harapan jarum menunjuk ke bagian C?</li>
+<li>Sebuah koin dilempar 100 kali. Berapa frekuensi harapan muncul gambar?</li>
+<li>Dalam sebuah kantong terdapat 3 bola merah, 2 bola biru, dan 5 bola hijau. Jika satu bola diambil dan dikembalikan sebanyak 50 kali, berapa frekuensi harapan terambil bola hijau?</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Apa yang kamu pelajari tentang frekuensi harapan hari ini?</li>
+<li>Bagaimana frekuensi harapan membantu kita membuat prediksi dalam kehidupan nyata?</li>
+<li>Apakah frekuensi harapan selalu sama dengan hasil nyata? Mengapa bisa berbeda?</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>

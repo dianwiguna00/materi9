@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pertemuan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:15px;
+}
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:18px;
+}
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TOMBOL */
+button{
+    width:100%;
+    padding:14px;
+    font-size:clamp(20px, 2.5vw, 24px);
+    border:none;
+    border-radius:15px;
+    margin-bottom:2px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+.tujuan{background:#16a085;}
+.pemantik{background:#2980b9;}
+.kontekstual{background:#8e44ad;}
+.aktivitas{background:#e67e22;}
+.konsep{background:#27ae60;}
+.contoh{background:#3498db;}
+.latihan{background:#d35400;}
+.refleksi{background:#c0392b;}
+
+/* ISI */
+.content{
+    display:none;
+    font-size:clamp(20px, 2.5vw, 24px);
+    line-height:1.2;
+    color:#2c3e50;
+
+    padding-top:0px;       /* ✅ benar-benar tanpa jarak atas */
+    padding-right:6px;
+    padding-left:6px;
+    padding-bottom:8px;
+
+    margin-top:0px;
+    margin-bottom:10px;
+
+    white-space:pre-line;
+}
+
+@media (max-width:900px){
+    .content{font-size:18px;}
+}
+</style>
+
+<script>
+function toggle(id){
+    const contents = document.querySelectorAll('.content');
+
+    contents.forEach(c => {
+        if(c.id !== id){
+            c.style.display = "none";
+        }
+    });
+
+    const el = document.getElementById(id);
+    el.style.display = el.style.display==="block" ? "none" : "block";
+}
+</script>
+</head>
+
+<body>
+<div class="container">
+
+<h1>📘 Materi 7</h1>
+
+<div class="card">
+
+<button class="pemantik" onclick="toggle('pemantik')">💡 Pemantik</button>
+
+<div class="content" id="pemantik">
+<ol>
+<li>Pernahkah kamu melihat bentuk akar yang angkanya besar dan bertanya bagaimana cara menyederhanakannya?</li>
+<li>Mengapa menurutmu tidak semua bentuk akar bisa langsung dijumlahkan atau dikurangkan?</li>
+</ol>
+</div>
+
+<button class="kontekstual" onclick="toggle('kontekstual')">🌍 Penerapan Kontekstual</button>
+
+<div class="content" id="kontekstual">
+<ol>
+<li>Menyederhanakan perhitungan jarak atau panjang diagonal agar lebih mudah dipahami.</li>
+<li>Menghitung ukuran benda atau bidang dengan hasil akar yang dapat disederhanakan.</li>
+<li>Memudahkan perhitungan saat menggabungkan beberapa ukuran sejenis dalam satu masalah.</li>
+<li>Menghindari kesalahan saat melakukan operasi hitung pada bentuk akar dalam kehidupan sehari-hari.</li>
+</ol>
+</div>
+
+<button class="tujuan" onclick="toggle('tujuan')">🎯 Tujuan Pembelajaran</button>
+
+<div class="content" id="tujuan">
+<ol>
+<li>Siswa dapat menyederhanakan bentuk akar dan melakukan operasi penjumlahan, pengurangan, perkalian, dan pembagian pada bentuk akar sederhana.</li>
+</ol>
+</div>
+
+<button class="aktivitas" onclick="toggle('aktivitas')">📚 Aktivitas Inti</button>
+
+<div class="content" id="aktivitas">
+<ol>
+<li>Mengamati beberapa contoh bentuk akar yang dapat dan tidak dapat disederhanakan.</li>
+<li>Berdiskusi dalam kelompok untuk menentukan bentuk akar yang sejenis dan tidak sejenis.</li>
+<li>Mengerjakan latihan operasi penjumlahan, pengurangan, perkalian, dan pembagian bentuk akar.</li>
+<li>Membahas hasil latihan dan saling memberi tanggapan antarkelompok.</li>
+</ol>
+</div>
+
+<button class="konsep" onclick="toggle('konsep')">🧠 Pemahaman Konsep</button>
+
+<div class="content" id="konsep">
+<strong>Menyederhanakan Bentuk Akar</strong><br>
+Bentuk akar dapat disederhanakan jika bilangan di dalam akar memiliki faktor kuadrat sempurna.<br>
+Contoh:<br>
+√50 = √25 × √2 = 5√2<br><br>
+<strong>Operasi Penjumlahan dan Pengurangan</strong><br>
+Hanya suku dengan akar yang sejenis yang dapat dijumlahkan atau dikurangkan.<br>
+Contoh:<br>
+3√2 + 5√2 = 8√2<br><br>
+<strong>Operasi Perkalian</strong><br>
+Gunakan sifat:<br>
+√a × √b = √(a × b)<br>
+Contoh: √3 × √12 = √36 = 6<br><br>
+<strong>Operasi Pembagian</strong><br>
+Gunakan sifat: √a / √b = √(a / b) (jika b ≠ 0)<br>
+Contoh: √18 / √2 = √9 = 3
+</div>
+
+<button class="contoh" onclick="toggle('contoh')">✍️ Contoh Soal</button>
+
+<div class="content" id="contoh">
+<strong>Contoh Soal 1: Menyederhanakan Bentuk Akar</strong><br>
+Sederhanakan: √72<br>
+Penyelesaian: √72 = √36 × √2 = 6√2<br><br>
+<strong>Contoh Soal 2: Penjumlahan Bentuk Akar</strong><br>
+Hitung: 4√3 + 2√3 = 6√3<br><br>
+<strong>Contoh Soal 3: Perkalian Bentuk Akar</strong><br>
+Hitung: √5 × √20 = √100 = 10
+</div>
+
+<button class="latihan" onclick="toggle('latihan')">📝 Latihan Soal</button>
+
+<div class="content" id="latihan">
+<ol>
+<li>Sederhanakan bentuk akar berikut:<br>
+a. √98<br>
+b. √75<br>
+c. √32</li>
+<li>Hitung hasil dari:<br>
+a. 3√7 + 5√7<br>
+b. √6 × √24<br>
+c. √50 / √2</li>
+<li>Jelaskan mengapa √8 + √18 tidak bisa langsung dijumlahkan, dan bagaimana cara menyederhanakannya terlebih dahulu.</li>
+</ol>
+</div>
+
+<button class="refleksi" onclick="toggle('refleksi')">🔍 Refleksi Pembelajaran</button>
+
+<div class="content" id="refleksi">
+<ol>
+<li>Apa manfaat menyederhanakan bentuk akar sebelum melakukan operasi?</li>
+<li>Dalam situasi apa kamu bisa menggunakan bentuk akar dalam kehidupan nyata?</li>
+</ol>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>
