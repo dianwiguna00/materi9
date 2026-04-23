@@ -8,45 +8,69 @@
 <style>
 body{
   font-family: Arial, sans-serif;
-  background:#f2f6ff;
   margin:0;
+  padding:0;
+
+  /* ✅ BACKGROUND JPG */
+  background: url("1.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* overlay biar teks tetap jelas */
+body::before{
+  content:"";
+  position:fixed;
+  top:0;left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.35);
+  z-index:-1;
 }
 
 .container{
   max-width:900px;
-  margin:30px auto;
-  background:white;
+  margin:40px auto;
   padding:25px;
-  border-radius:15px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+
+  /* ✨ glass effect */
+  background:rgba(255,255,255,0.85);
+  backdrop-filter: blur(6px);
+
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
 }
 
 h1{
   text-align:center;
+  color:#222;
 }
 
-/* DETAILS & SUMMARY */
+/* DETAILS */
 details{
   margin-bottom:15px;
 }
 
 summary{
-  background:#4CAF50;
+  background:linear-gradient(135deg,#4CAF50,#2e7d32);
   color:white;
   padding:12px;
   border-radius:10px;
   cursor:pointer;
   font-weight:bold;
   font-size:18px;
+  transition:0.3s;
+}
+
+summary:hover{
+  transform:scale(1.02);
 }
 
 details details summary{
-  background:#2196F3;
+  background:linear-gradient(135deg,#2196F3,#1565c0);
   font-size:16px;
-  margin-top:10px;
 }
 
-/* LIST MATERI */
+/* LIST */
 ul{
   list-style:none;
   padding-left:15px;
@@ -65,28 +89,32 @@ a{
   color:#333;
   font-weight:bold;
   background:#e9f0ff;
+  transition:0.3s;
 }
 
 a:hover{
   background:#cfdfff;
+  transform:translateX(5px);
 }
 
-/* TOMBOL VIDEO */
+/* BUTTON VIDEO */
 .menu-button{
   display:block;
-  background:#4CAF50;
+  background:linear-gradient(135deg,#4CAF50,#2e7d32);
   color:white;
-  padding:12px;
-  border-radius:10px;
-  margin:20px 0;
+  padding:14px;
+  border-radius:12px;
+  margin:25px 0;
   font-weight:bold;
   font-size:18px;
   text-decoration:none;
   text-align:light;
+  transition:0.3s;
 }
 
 .menu-button:hover{
   background:#43a047;
+  transform:scale(1.02);
 }
 
 /* FOOTER */
@@ -94,7 +122,8 @@ a:hover{
   text-align:center;
   margin-top:30px;
   font-size:14px;
-  color:#666;
+  color:#fff;
+  text-shadow:0 2px 5px rgba(0,0,0,0.5);
 }
 </style>
 
@@ -114,13 +143,13 @@ a:hover{
   <details>
     <summary>Semester 1</summary>
     <ul>
-<li><a href="https://dianwiguna00.github.io/materi7/">Matematika Kelas 7</a></li>
+<li><a href="https://dianwiguna00.github.io/materi7/">Matematika Kelas 8</a></li>
     </ul>
   </details>
   <details>
     <summary>Semester 2</summary>
     <ul>
-<li><a href="https://dianwiguna00.github.io/materi7/">Matematika Kelas 7</a></li>
+<li><a href="https://dianwiguna00.github.io/materi7/">Matematika Kelas 8</a></li>
     </ul>
   </details>
 </details>
@@ -197,8 +226,6 @@ a:hover{
 <li><a href="Kelas9/9A2/Materi10.html">Materi 10</a></li>
 <li><a href="Kelas9/9A2/Materi11.html">Materi 11</a></li>
 <li><a href="Kelas9/9A2/Materi12.html">Materi 12</a></li>
-
-
     </ul>
   </details>
 </details>
@@ -210,13 +237,12 @@ a:hover{
   ▶️ Video Pembelajaran
 </a>
 
+</div>
+
 <!-- FOOTER -->
 <div class="footer">
 Aplikasi ini dibuat untuk membantu pembelajaran siswa dan guru menggunakan TV IFP. <br>
 Semoga bermanfaat — <b>Dian Wiguna</b>
 </div>
-
-</div>
-
 </body>
 </html>
